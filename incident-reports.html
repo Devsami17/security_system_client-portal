@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Client Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- inject:css-->
+
+    <link rel="stylesheet" href="css/plugin.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- endinject -->
+
+    <link rel="icon" type="image/png" sizes="16x16" href="https://voags.com/assets/imgs/home1/logo.webp">
+</head>
+
+<body class="layout-light side-menu overlayScroll">
+    <div class="mobile-search">
+        <form class="search-form">
+            <span data-feather="search"></span>
+            <input class="form-control mr-sm-2 box-shadow-none" type="text" placeholder="Search...">
+        </form>
+    </div>
+
+    <div class="mobile-author-actions"></div>
+    <header class="header-top">
+        <nav class="navbar navbar-light">
+            <div class="navbar-left">
+                <a href="#" class="sidebar-toggle">
+                    <img class="svg" src="img/svg/bars.svg" alt="img"></a>
+                <a class="navbar-brand" href="#"><img class="dark" src="https://voags.com/Media/website.png" alt="svg"><img class="light" src="img/website-1.png" alt="img"></a>
+                <form action="https://demo.jsnorm.com/" class="search-form">
+                    <span data-feather="search"></span>
+                    <input class="form-control mr-sm-2 box-shadow-none" type="text" placeholder="Search...">
+                </form>
+              
+            </div>
+            <!-- ends: navbar-left -->
+
+            <div class="navbar-right">
+                <ul class="navbar-right__menu">
+                    <li class="nav-search d-none">
+                        <a href="#" class="search-toggle">
+                            <i class="la la-search"></i>
+                            <i class="la la-times"></i>
+                        </a>
+                        <form action="https://demo.jsnorm.com/" class="search-form-topMenu">
+                            <span class="search-icon" data-feather="search"></span>
+                            <input class="form-control mr-sm-2 box-shadow-none" type="text" placeholder="Search...">
+                        </form>
+                    </li>
+                    
+                    <!-- ends: nav-message -->
+                    <li class="nav-notification">
+                        <div class="dropdown-custom">
+                            <a href="javascript:;" class="nav-item-toggle">
+                                <span data-feather="bell"></span></a>
+                            <div class="dropdown-wrapper">
+                                <h2 class="dropdown-wrapper__title">Notifications <span class="badge-circle badge-warning ml-1">4</span></h2>
+                                <ul>
+                                    <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--primary">
+                                            <span data-feather="inbox"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--secondary">
+                                            <span data-feather="upload"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--success">
+                                            <span data-feather="log-in"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--info">
+                                            <span data-feather="at-sign"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--danger">
+                                            <span data-feather="heart"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="#" class="dropdown-wrapper__more">See all incoming activity</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                   
+                    <!-- ends: .nav-support -->
+                    <li class="nav-flag-select">
+                        <div class="dropdown-custom">
+                            <a href="javascript:;" class="nav-item-toggle"><img src="img/flag.png" alt="" class="rounded-circle"></a>
+                            <div class="dropdown-wrapper dropdown-wrapper--small">
+                                <a href="#"><img src="img/eng.png" alt=""> English</a>
+                                <a href="#"><img src="img/ger.png" alt=""> German</a>
+                                <a href="#"><img src="img/spa.png" alt=""> Spanish</a>
+                                <a href="#"><img src="img/tur.png" alt=""> Turkish</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ends: .nav-flag-select -->
+                    <li class="nav-author">
+                        <div class="dropdown-custom">
+                            <a href="javascript:;" class="nav-item-toggle"><img src="img/author-nav.jpg" alt="" class="rounded-circle"></a>
+                            <div class="dropdown-wrapper">
+                                <div class="nav-author__info">
+                                    <div class="author-img">
+                                        <img src="img/author-nav.jpg" alt="" class="rounded-circle">
+                                    </div>
+                                    <div>
+                                        <h6>John Doe</h6>
+                                        <span>Owner</span>
+                                    </div>
+                                </div>
+                                <div class="nav-author__options">
+                                   
+                                    <a href="#" class="nav-author__signout">
+                                        <span data-feather="log-out"></span> Sign Out</a>
+                                </div>
+                            </div>
+                            <!-- ends: .dropdown-wrapper -->
+                        </div>
+                    </li>
+                    <!-- ends: .nav-author -->
+                </ul>
+                <!-- ends: .navbar-right__menu -->
+                <div class="navbar-right__mobileAction d-md-none">
+                    <a href="#" class="btn-search">
+                        <span data-feather="search"></span>
+                        <span data-feather="x"></span></a>
+                    <a href="#" class="btn-author-action">
+                        <span data-feather="more-vertical"></span></a>
+                </div>
+            </div>
+            <!-- ends: .navbar-right -->
+        </nav>
+    </header>
+    <main class="main-content">
+        <aside class="sidebar-wrapper">
+            <div class="sidebar sidebar-collapse" id="sidebar">
+                <div class="sidebar__menu-group">
+                    <ul class="sidebar_nav">
+                        
+                        <!-- MAIN MENU TITLE -->
+                        <li class="menu-title">
+                            <span>Client Portal</span>
+                        </li>
+        
+                        <!-- 1. Appointment Overview -->
+                        <li class="has-child ">
+                            <a class="" href="appointment-overview.html">
+                                <span data-feather="calendar" class="nav-icon"></span>
+                                <span onclick="window.location='appointment-overview.html'" class="menu-text">Appointment Overview</span>
+                            </a>
+                        </li>
+        
+                        <!-- 2. Object Selection & Invoice Management -->
+                        <li class="has-child">
+                            <a href="#">
+                                <span data-feather="file-text" class="nav-icon"></span>
+                                <span class="menu-text">Objects & Invoices</span>
+                                <span class="toggle-icon"></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="object-selection.html">Object Selection</a>
+                                </li>
+                                <li>
+                                    <a href="invoice-management.html">Invoice Management</a>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <!-- 3. Annual Budget Overview -->
+                        <li class="has-child">
+                            <a href="annual-budget.html">
+                                <span data-feather="bar-chart-2" class="nav-icon"></span>
+                                <span onclick="window.location='annual-budget.html'" class="menu-text">Annual Budget Overview</span>
+                            </a>
+                        </li>
+        
+                        <!-- 4. Reporting & Digital Signature -->
+                        <li class="has-child">
+                            <a href="#">
+                                <span data-feather="edit" class="nav-icon"></span>
+                                <span class="menu-text">Reports & Digital Signature</span>
+                                <span class="toggle-icon"></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="report-legal-complaint.html">Legal Complaints Reporting</a>
+                                </li>
+                                <li>
+                                    <a href="digital-signature.html">Digital Signature</a>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <!-- 5. Prevention Training Tracking -->
+                        <li class="has-child">
+                            <a href="training-tracking.html">
+                                <span data-feather="book-open" class="nav-icon"></span>
+                                <span onclick="window.location='training-tracking.html'" class="menu-text">Prevention Training Tracking</span>
+                            </a>
+                        </li>
+        
+                        <!-- 6. Incident Reports & Complaint Filing -->
+                        <li class="has-child open">
+                            <a class="active" href="incident-reports.html">
+                                <span data-feather="alert-triangle" class="nav-icon"></span>
+                                <span onclick="window.location='incident-reports.html'" class="menu-text">Incident & Complaints</span>
+                            </a>
+                        </li>
+        
+                        <!-- 7. Organizational Chart -->
+                        <li class="has-child">
+                            <a href="organizational-chart.html">
+                                <span data-feather="users" class="nav-icon"></span>
+                                <span onclick="window.location='organizational-chart.html'" class="menu-text">Organizational Chart</span>
+                            </a>
+                        </li>
+        
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        
+        
+        <div class="contents">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contact-breadcrumb">
+                            <div class="breadcrumb-main add-contact justify-content-sm-between">
+                                <div class="d-flex flex-wrap justify-content-center breadcrumb-main__wrapper">
+                                    <div class="d-flex align-items-center add-contact__title justify-content-center mr-sm-25">
+                                        <h4 class="text-capitalize fw-500 breadcrumb-title">Incident & Complaints</h4>
+                                        <span class="sub-title ml-sm-25 pl-sm-25"></span>
+                                    </div>
+        
+                                    <form action="#" class="d-flex align-items-center add-contact__form my-sm-0 my-2">
+                                        <span data-feather="search"></span>
+                                        <input class="form-control mr-sm-2 border-0 box-shadow-none" type="search" placeholder="Search by Name or ID" aria-label="Search">
+                                    </form>
+                                </div>
+        
+                                <div class="action-btn">
+                                    <a href="#" class="btn px-15 btn-primary" data-toggle="modal" data-target="#add-contact">
+                                        <i class="las la-plus fs-16"></i>Add New Complaint
+                                    </a>
+        
+                                    <!-- Delete Modal -->
+                                    <div class="modal-info-delete modal fade" id="modal-info-delete" tabindex="-1" role="dialog">
+                                        <div class="modal-dialog modal-sm modal-info" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <div class="modal-info-body d-flex">
+                                                        <div class="modal-info-icon warning">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+                                                                <circle cx="12" cy="12" r="10"></circle>
+                                                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="modal-info-text">
+                                                            <h6>Do you want to delete this complaint?</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger btn-outlined btn-sm" data-dismiss="modal">No</button>
+                                                    <button type="button" class="btn btn-success btn-outlined btn-sm" data-dismiss="modal">Yes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- Add Complaint Modal -->
+                                    <div class="modal fade add-contact" id="add-contact" role="dialog">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content radius-xl">
+                                                <div class="modal-header">
+                                                    <h6 class="modal-title fw-500">Add New Complaint</h6>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span data-feather="x"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="add-new-contact">
+                                                        <form action="#">
+                                                            <div class="form-group mb-20">
+                                                                <label>Complainant Name:</label>
+                                                                <input type="text" class="form-control form-control-lg" placeholder="Full Name">
+                                                            </div>
+                                                            <div class="form-group mb-20">
+                                                                <label>Email Address:</label>
+                                                                <input type="email" class="form-control form-control-lg" placeholder="Email Address">
+                                                            </div>
+                                                            <div class="form-group mb-20">
+                                                                <label>Phone Number:</label>
+                                                                <input type="text" class="form-control form-control-lg" placeholder="Phone Number">
+                                                            </div>
+                                                            <div class="form-group mb-20">
+                                                                <label>Incident Date:</label>
+                                                                <input type="date" class="form-control form-control-lg">
+                                                            </div>
+                                                            <div class="form-group mb-20">
+                                                                <label>Incident Time:</label>
+                                                                <input type="time" class="form-control form-control-lg">
+                                                            </div>
+                                                            <div class="form-group mb-20">
+                                                                <label>Complaint Description:</label>
+                                                                <textarea class="form-control form-control-lg" rows="4" placeholder="Describe the incident..."></textarea>
+                                                            </div>
+        
+                                                            <div class="button-group d-flex pt-20">
+                                                                <button class="btn btn-primary btn-default btn-squared">Submit Complaint</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- Edit Complaint Modal -->
+                                    <div class="modal fade edit-contact" id="edit-contact" role="dialog">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content radius-xl">
+                                                <div class="modal-header">
+                                                    <h6 class="modal-title fw-500">Edit Complaint</h6>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span data-feather="x"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="edit-new-contact">
+                                                        <form action="#">
+                                                            <div class="form-group mb-20">
+                                                                <label>Complainant Name:</label>
+                                                                <input type="text" class="form-control form-control-lg" value="Johnny">
+                                                            </div>
+                                                            <div class="form-group mb-20">
+                                                                <label>Email Address:</label>
+                                                                <input type="email" class="form-control form-control-lg" value="Johnny@yahoo.com">
+                                                            </div>
+                                                            <div class="form-group mb-20">
+                                                                <label>Phone Number:</label>
+                                                                <input type="text" class="form-control form-control-lg" value="+1 (861) 550-2796">
+                                                            </div>
+                                                            <div class="form-group mb-20">
+                                                                <label>Incident Date:</label>
+                                                                <input type="date" class="form-control form-control-lg">
+                                                            </div>
+                                                            <div class="form-group mb-20">
+                                                                <label>Incident Time:</label>
+                                                                <input type="time" class="form-control form-control-lg">
+                                                            </div>
+                                                            <div class="form-group mb-20">
+                                                                <label>Complaint Description:</label>
+                                                                <textarea class="form-control form-control-lg" rows="4">Description goes here...</textarea>
+                                                            </div>
+        
+                                                            <div class="button-group d-flex pt-20">
+                                                                <button class="btn btn-primary btn-default btn-squared">Save Changes</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div> <!-- action-btn -->
+                            </div> <!-- breadcrumb-main -->
+                        </div> <!-- contact-breadcrumb -->
+                    </div>
+                </div>
+        
+                <!-- Table section -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contact-list-wrap mb-25">
+                            <div class="contact-list bg-white radius-xl w-100">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover align-middle">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Complaint Title</th>
+                                                <th>Type</th>
+                                                <th>Date Reported</th>
+                                                <th>Status</th>
+                                                <th>Reported By</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                        
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Unauthorized Access</td>
+                                                <td>Security Breach</td>
+                                                <td>05-Mar-2025</td>
+                                                <td><span class="status-active">Active</span></td>
+                                                <td>John Doe</td>
+                                                <td>
+                                                    <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
+                                                       
+                                                        <li>
+                                                            <a data-toggle="modal" href="#" data-target="#edit-contact" class="edit">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="remove" data-toggle="modal" data-target="#modal-info-delete">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2">
+                                                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                        
+                                           
+                        
+                                        </tbody>
+                                    </table>
+                                </div> <!-- table-responsive -->
+                            </div> <!-- contact-list -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+       
+    </main>
+    <div id="overlayer">
+        <span class="loader-overlay">
+            <div class="atbd-spin-dots spin-lg">
+                <span class="spin-dot badge-dot dot-primary"></span>
+                <span class="spin-dot badge-dot dot-primary"></span>
+                <span class="spin-dot badge-dot dot-primary"></span>
+                <span class="spin-dot badge-dot dot-primary"></span>
+            </div>
+        </span>
+    </div>
+    <div class="overlay-dark-sidebar"></div>
+    <div class="customizer-overlay"></div>
+
+    <a href="#" class="customizer-trigger">
+        <span data-feather="settings"></span></a>
+    <div class="customizer-wrapper">
+        <div class="customizer">
+            <div class="customizer__head">
+                <h4 class="customizer__title">Setting</h4>
+                <span class="customizer__sub-title">Customize your dashboard theme</span>
+                <a href="#" class="customizer-close">
+                    <span data-feather="x"></span></a>
+            </div>
+            <div class="customizer__body">
+          
+                <!-- ends: .customizer__single -->
+
+                <div class="customizer__single">
+                    <h4>Theme</h4>
+                    <ul class="customizer-list d-flex l_sidebar">
+                        <li class="customizer-list__item">
+                            <a href="#" data-layout="light" class="active">
+                                <img src="img/light.png" alt="">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                        </li>
+                        <li class="customizer-list__item">
+                            <a href="#" data-layout="dark">
+                                <img src="img/dark.png" alt="">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ends: .customizer__single -->
+
+             
+                <!-- ends: .customizer__single -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDduF2tLXicDEPDMAtC6-NLOekX0A5vlnY"></script>
+    <!-- inject:js-->
+    <script src="js/plugins.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <!-- endinject-->
+     
+</body>
+
+
+
+</html>

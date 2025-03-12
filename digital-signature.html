@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Client Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- inject:css-->
+
+    <link rel="stylesheet" href="css/plugin.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- endinject -->
+
+    <link rel="icon" type="image/png" sizes="16x16" href="https://voags.com/assets/imgs/home1/logo.webp">
+</head>
+
+<body class="layout-light side-menu overlayScroll">
+    <div class="mobile-search">
+        <form class="search-form">
+            <span data-feather="search"></span>
+            <input class="form-control mr-sm-2 box-shadow-none" type="text" placeholder="Search...">
+        </form>
+    </div>
+
+    <div class="mobile-author-actions"></div>
+    <header class="header-top">
+        <nav class="navbar navbar-light">
+            <div class="navbar-left">
+                <a href="#" class="sidebar-toggle">
+                    <img class="svg" src="img/svg/bars.svg" alt="img"></a>
+                <a class="navbar-brand" href="#"><img class="dark" src="https://voags.com/Media/website.png" alt="svg"><img class="light" src="img/website-1.png" alt="img"></a>
+                <form action="https://demo.jsnorm.com/" class="search-form">
+                    <span data-feather="search"></span>
+                    <input class="form-control mr-sm-2 box-shadow-none" type="text" placeholder="Search...">
+                </form>
+              
+            </div>
+            <!-- ends: navbar-left -->
+
+            <div class="navbar-right">
+                <ul class="navbar-right__menu">
+                    <li class="nav-search d-none">
+                        <a href="#" class="search-toggle">
+                            <i class="la la-search"></i>
+                            <i class="la la-times"></i>
+                        </a>
+                        <form action="https://demo.jsnorm.com/" class="search-form-topMenu">
+                            <span class="search-icon" data-feather="search"></span>
+                            <input class="form-control mr-sm-2 box-shadow-none" type="text" placeholder="Search...">
+                        </form>
+                    </li>
+                    
+                    <!-- ends: nav-message -->
+                    <li class="nav-notification">
+                        <div class="dropdown-custom">
+                            <a href="javascript:;" class="nav-item-toggle">
+                                <span data-feather="bell"></span></a>
+                            <div class="dropdown-wrapper">
+                                <h2 class="dropdown-wrapper__title">Notifications <span class="badge-circle badge-warning ml-1">4</span></h2>
+                                <ul>
+                                    <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--primary">
+                                            <span data-feather="inbox"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--secondary">
+                                            <span data-feather="upload"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--success">
+                                            <span data-feather="log-in"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--info">
+                                            <span data-feather="at-sign"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--danger">
+                                            <span data-feather="heart"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="#" class="dropdown-wrapper__more">See all incoming activity</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                   
+                    <!-- ends: .nav-support -->
+                    <li class="nav-flag-select">
+                        <div class="dropdown-custom">
+                            <a href="javascript:;" class="nav-item-toggle"><img src="img/flag.png" alt="" class="rounded-circle"></a>
+                            <div class="dropdown-wrapper dropdown-wrapper--small">
+                                <a href="#"><img src="img/eng.png" alt=""> English</a>
+                                <a href="#"><img src="img/ger.png" alt=""> German</a>
+                                <a href="#"><img src="img/spa.png" alt=""> Spanish</a>
+                                <a href="#"><img src="img/tur.png" alt=""> Turkish</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ends: .nav-flag-select -->
+                    <li class="nav-author">
+                        <div class="dropdown-custom">
+                            <a href="javascript:;" class="nav-item-toggle"><img src="img/author-nav.jpg" alt="" class="rounded-circle"></a>
+                            <div class="dropdown-wrapper">
+                                <div class="nav-author__info">
+                                    <div class="author-img">
+                                        <img src="img/author-nav.jpg" alt="" class="rounded-circle">
+                                    </div>
+                                    <div>
+                                        <h6>John Doe</h6>
+                                        <span>Owner</span>
+                                    </div>
+                                </div>
+                                <div class="nav-author__options">
+                                   
+                                    <a href="#" class="nav-author__signout">
+                                        <span data-feather="log-out"></span> Sign Out</a>
+                                </div>
+                            </div>
+                            <!-- ends: .dropdown-wrapper -->
+                        </div>
+                    </li>
+                    <!-- ends: .nav-author -->
+                </ul>
+                <!-- ends: .navbar-right__menu -->
+                <div class="navbar-right__mobileAction d-md-none">
+                    <a href="#" class="btn-search">
+                        <span data-feather="search"></span>
+                        <span data-feather="x"></span></a>
+                    <a href="#" class="btn-author-action">
+                        <span data-feather="more-vertical"></span></a>
+                </div>
+            </div>
+            <!-- ends: .navbar-right -->
+        </nav>
+    </header>
+    <main class="main-content">
+        <aside class="sidebar-wrapper">
+            <div class="sidebar sidebar-collapse" id="sidebar">
+                <div class="sidebar__menu-group">
+                    <ul class="sidebar_nav">
+                        
+                        <!-- MAIN MENU TITLE -->
+                        <li class="menu-title">
+                            <span>Client Portal</span>
+                        </li>
+        
+                        <!-- 1. Appointment Overview -->
+                        <li class="has-child ">
+                            <a class="" href="appointment-overview.html">
+                                <span data-feather="calendar" class="nav-icon"></span>
+                                <span onclick="window.location='appointment-overview.html'" class="menu-text">Appointment Overview</span>
+                            </a>
+                        </li>
+        
+                        <!-- 2. Object Selection & Invoice Management -->
+                        <li class="has-child">
+                            <a href="#">
+                                <span data-feather="file-text" class="nav-icon"></span>
+                                <span class="menu-text">Objects & Invoices</span>
+                                <span class="toggle-icon"></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="object-selection.html">Object Selection</a>
+                                </li>
+                                <li>
+                                    <a href="invoice-management.html">Invoice Management</a>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <!-- 3. Annual Budget Overview -->
+                        <li class="has-child">
+                            <a href="annual-budget.html">
+                                <span data-feather="bar-chart-2" class="nav-icon"></span>
+                                <span onclick="window.location='annual-budget.html'" class="menu-text">Annual Budget Overview</span>
+                            </a>
+                        </li>
+        
+                        <!-- 4. Reporting & Digital Signature -->
+                        <li class="has-child open">
+                            <a href="#" class="active">
+                                <span data-feather="edit" class="nav-icon"></span>
+                                <span class="menu-text">Reports & Digital Signature</span>
+                                <span class="toggle-icon"></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="report-legal-complaint.html">Legal Complaints Reporting</a>
+                                </li>
+                                <li >
+                                    <a class="active" href="digital-signature.html">Digital Signature</a>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <!-- 5. Prevention Training Tracking -->
+                        <li class="has-child">
+                            <a href="training-tracking.html">
+                                <span data-feather="book-open" class="nav-icon"></span>
+                                <span onclick="window.location='training-tracking.html'" class="menu-text">Prevention Training Tracking</span>
+                            </a>
+                        </li>
+        
+                        <!-- 6. Incident Reports & Complaint Filing -->
+                        <li class="has-child">
+                            <a href="incident-reports.html">
+                                <span data-feather="alert-triangle" class="nav-icon"></span>
+                                <span onclick="window.location='incident-reports.html'" class="menu-text">Incident & Complaints</span>
+                            </a>
+                        </li>
+        
+                        <!-- 7. Organizational Chart -->
+                        <li class="has-child">
+                            <a href="organizational-chart.html">
+                                <span data-feather="users" class="nav-icon"></span>
+                                <span onclick="window.location='organizational-chart.html'" class="menu-text">Organizational Chart</span>
+                            </a>
+                        </li>
+        
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        
+        
+        <div class="contents">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contact-breadcrumb">
+
+                            <div class="breadcrumb-main add-contact justify-content-sm-between ">
+                                <div class=" d-flex flex-wrap justify-content-center breadcrumb-main__wrapper">
+                                    <div class="d-flex align-items-center add-contact__title justify-content-center mr-sm-25">
+                                        <h4 class="text-capitalize fw-500 breadcrumb-title">Digital Signature</h4>
+                                        <span class="sub-title ml-sm-25 pl-sm-25"></span>
+                                    </div>
+
+                                
+
+                                </div>
+                            
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contact-list-wrap mb-25">
+
+                            <!-- Digital Signature Header -->
+                            <h4>Digital Signature Panel</h4>
+                            <p class="text-muted">
+                                Secure and legally binding digital signature integration with <strong>Signo TEC</strong>.
+                            </p>
+                        
+                        
+                            <!-- Step 3: Signature Canvas -->
+                            <div class="signature-box border rounded p-3 text-center mb-3">
+                                <canvas id="signatureCanvas" class="w-100 border rounded" height="200"></canvas>
+                            </div>
+                        
+                            <!-- Buttons -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-danger" onclick="clearSignature()">Clear</button>
+                                <button class="btn btn-success" onclick="saveSignature()">Save Signature</button>
+                            </div>
+                        
+                            <!-- Signature Status -->
+                            <div id="signatureStatus" class="mt-3 text-center text-success fs-14"></div>
+                        
+                            <!-- Signature Preview -->
+                            <div id="signaturePreview" class="mt-4 border-top pt-3 d-none text-center">
+                                <h5 class="text-dark fw-bold">Signed Document</h5>
+                                <img id="savedSignature" class="border rounded shadow-sm mt-2" width="300" alt="Digital Signature Preview">
+                                <p class="text-muted mt-2">This signature has been securely saved and verified.</p>
+                            </div>
+                        
+                        </div>
+                        
+                        
+
+                      
+                      
+                        
+                        
+                        
+                    </div>
+                    <!-- ends: col-12 -->
+                </div>
+            </div>
+
+        </div>
+       
+       
+    </main>
+    <div id="overlayer">
+        <span class="loader-overlay">
+            <div class="atbd-spin-dots spin-lg">
+                <span class="spin-dot badge-dot dot-primary"></span>
+                <span class="spin-dot badge-dot dot-primary"></span>
+                <span class="spin-dot badge-dot dot-primary"></span>
+                <span class="spin-dot badge-dot dot-primary"></span>
+            </div>
+        </span>
+    </div>
+    <div class="overlay-dark-sidebar"></div>
+    <div class="customizer-overlay"></div>
+
+    <a href="#" class="customizer-trigger">
+        <span data-feather="settings"></span></a>
+    <div class="customizer-wrapper">
+        <div class="customizer">
+            <div class="customizer__head">
+                <h4 class="customizer__title">Setting</h4>
+                <span class="customizer__sub-title">Customize your dashboard theme</span>
+                <a href="#" class="customizer-close">
+                    <span data-feather="x"></span></a>
+            </div>
+            <div class="customizer__body">
+          
+                <!-- ends: .customizer__single -->
+
+                <div class="customizer__single">
+                    <h4>Theme</h4>
+                    <ul class="customizer-list d-flex l_sidebar">
+                        <li class="customizer-list__item">
+                            <a href="#" data-layout="light" class="active">
+                                <img src="img/light.png" alt="">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                        </li>
+                        <li class="customizer-list__item">
+                            <a href="#" data-layout="dark">
+                                <img src="img/dark.png" alt="">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ends: .customizer__single -->
+
+             
+                <!-- ends: .customizer__single -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDduF2tLXicDEPDMAtC6-NLOekX0A5vlnY"></script>
+    <!-- inject:js-->
+    <script src="js/plugins.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script>
+        let canvas = document.getElementById("signatureCanvas");
+        let ctx = canvas.getContext("2d");
+        let isDrawing = false;
+    
+        function resizeCanvas() {
+            let containerWidth = document.querySelector(".signature-box").clientWidth;
+            canvas.width = containerWidth - 10; 
+        }
+    
+        window.addEventListener("resize", resizeCanvas);
+        resizeCanvas(); 
+      
+        canvas.addEventListener("mousedown", startDrawing);
+        canvas.addEventListener("mouseup", stopDrawing);
+        canvas.addEventListener("mousemove", draw);
+    
+       
+        canvas.addEventListener("touchstart", startDrawing);
+        canvas.addEventListener("touchend", stopDrawing);
+        canvas.addEventListener("touchmove", drawTouch);
+    
+        function startDrawing(event) {
+            isDrawing = true;
+            ctx.beginPath();
+        }
+    
+        function stopDrawing() {
+            isDrawing = false;
+            ctx.beginPath();
+        }
+    
+        function draw(event) {
+            if (!isDrawing) return;
+            ctx.lineWidth = 2;
+            ctx.lineCap = "round";
+            ctx.strokeStyle = "black";
+    
+            let rect = canvas.getBoundingClientRect();
+            ctx.lineTo(event.clientX - rect.left, event.clientY - rect.top);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(event.clientX - rect.left, event.clientY - rect.top);
+        }
+    
+        function drawTouch(event) {
+            event.preventDefault();
+            let touch = event.touches[0];
+            let rect = canvas.getBoundingClientRect();
+            let offsetX = touch.clientX - rect.left;
+            let offsetY = touch.clientY - rect.top;
+    
+            if (!isDrawing) return;
+            ctx.lineTo(offsetX, offsetY);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(offsetX, offsetY);
+        }
+    
+        function clearSignature() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            document.getElementById("signatureStatus").innerText = "🧹 Signature cleared!";
+            document.getElementById("signaturePreview").classList.add("d-none");
+        }
+    
+        function saveSignature() {
+            let signatureData = canvas.toDataURL("image/png");
+            if (signatureData.length > 10000) {
+                document.getElementById("savedSignature").src = signatureData;
+                document.getElementById("signaturePreview").classList.remove("d-none");
+                document.getElementById("signatureStatus").innerText = "Signature saved successfully!";
+            } else {
+                document.getElementById("signatureStatus").innerText = "Please sign before saving.";
+            }
+        }
+    </script>
+    <!-- endinject-->
+     
+</body>
+
+
+
+</html>

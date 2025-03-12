@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Client Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- inject:css-->
+
+    <link rel="stylesheet" href="css/plugin.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- endinject -->
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+    
+        body {
+          font-family: Arial, sans-serif;
+          background: #f4f4f4;
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+        }
+    
+        .page-wrapper {
+          width: 100%;
+          max-width: 1200px;
+        }
+    
+        h2 {
+          text-align: center;
+          margin-bottom: 40px;
+          color: #333;
+        }
+    
+        .org-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+    
+        .org-node {
+          background: #ffffff;
+          border: 2px solid #3498db;
+          border-radius: 8px;
+          padding: 15px 20px;
+          margin: 10px;
+          text-align: center;
+          width: 250px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          position: relative;
+          transition: all 0.3s ease;
+        }
+    
+        .org-node strong {
+          color: #333;
+          display: block;
+          margin-bottom: 5px;
+          font-size: 16px;
+        }
+    
+        .org-node span {
+          color: #555;
+          font-size: 14px;
+        }
+    
+        .org-children {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 20px;
+          position: relative;
+          margin-top: 30px;
+          width: 100%;
+        }
+    
+        /* Lines for parent node */
+        .org-node::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          width: 2px;
+          height: 20px;
+          background: #333;
+          transform: translateX(-50%);
+        }
+    
+        /* Horizontal line connecting child nodes */
+        .org-children::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 15%;
+          right: 15%;
+          height: 2px;
+          background: #333;
+        }
+    
+        /* Vertical lines from children */
+        .org-children > .org-container::before {
+          content: '';
+          position: absolute;
+          top: -20px;
+          left: 50%;
+          width: 2px;
+          height: 20px;
+          background: #333;
+          transform: translateX(-50%);
+        }
+    
+        @media (max-width: 768px) {
+          .org-node {
+            width: 200px;
+          }
+    
+          .org-children {
+            flex-direction: column;
+            align-items: center;
+          }
+    
+          .org-children::before {
+            display: none;
+          }
+    
+          .org-children > .org-container::before {
+            display: none;
+          }
+        }
+    
+        @media (max-width: 480px) {
+          h2 {
+            font-size: 20px;
+          }
+    
+          .org-node {
+            width: 90%;
+            padding: 10px;
+          }
+        }
+    
+      </style>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://voags.com/assets/imgs/home1/logo.webp">
+</head>
+
+<body class="layout-light side-menu overlayScroll">
+    <div class="mobile-search">
+        <form class="search-form">
+            <span data-feather="search"></span>
+            <input class="form-control mr-sm-2 box-shadow-none" type="text" placeholder="Search...">
+        </form>
+    </div>
+
+    <div class="mobile-author-actions"></div>
+    <header class="header-top">
+        <nav class="navbar navbar-light">
+            <div class="navbar-left">
+                <a href="#" class="sidebar-toggle">
+                    <img class="svg" src="img/svg/bars.svg" alt="img"></a>
+                <a class="navbar-brand" href="#"><img class="dark" src="https://voags.com/Media/website.png" alt="svg"><img class="light" src="img/website-1.png" alt="img"></a>
+                <form action="https://demo.jsnorm.com/" class="search-form">
+                    <span data-feather="search"></span>
+                    <input class="form-control mr-sm-2 box-shadow-none" type="text" placeholder="Search...">
+                </form>
+              
+            </div>
+            <!-- ends: navbar-left -->
+
+            <div class="navbar-right">
+                <ul class="navbar-right__menu">
+                    <li class="nav-search d-none">
+                        <a href="#" class="search-toggle">
+                            <i class="la la-search"></i>
+                            <i class="la la-times"></i>
+                        </a>
+                        <form action="https://demo.jsnorm.com/" class="search-form-topMenu">
+                            <span class="search-icon" data-feather="search"></span>
+                            <input class="form-control mr-sm-2 box-shadow-none" type="text" placeholder="Search...">
+                        </form>
+                    </li>
+                    
+                    <!-- ends: nav-message -->
+                    <li class="nav-notification">
+                        <div class="dropdown-custom">
+                            <a href="javascript:;" class="nav-item-toggle">
+                                <span data-feather="bell"></span></a>
+                            <div class="dropdown-wrapper">
+                                <h2 class="dropdown-wrapper__title">Notifications <span class="badge-circle badge-warning ml-1">4</span></h2>
+                                <ul>
+                                    <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--primary">
+                                            <span data-feather="inbox"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--secondary">
+                                            <span data-feather="upload"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--success">
+                                            <span data-feather="log-in"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--info">
+                                            <span data-feather="at-sign"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
+                                        <div class="nav-notification__type nav-notification__type--danger">
+                                            <span data-feather="heart"></span>
+                                        </div>
+                                        <div class="nav-notification__details">
+                                            <p>
+                                                <a href="#" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
+                                                <span>sent you a message</span>
+                                            </p>
+                                            <p>
+                                                <span class="time-posted">5 hours ago</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="#" class="dropdown-wrapper__more">See all incoming activity</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                   
+                    <!-- ends: .nav-support -->
+                    <li class="nav-flag-select">
+                        <div class="dropdown-custom">
+                            <a href="javascript:;" class="nav-item-toggle"><img src="img/flag.png" alt="" class="rounded-circle"></a>
+                            <div class="dropdown-wrapper dropdown-wrapper--small">
+                                <a href="#"><img src="img/eng.png" alt=""> English</a>
+                                <a href="#"><img src="img/ger.png" alt=""> German</a>
+                                <a href="#"><img src="img/spa.png" alt=""> Spanish</a>
+                                <a href="#"><img src="img/tur.png" alt=""> Turkish</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ends: .nav-flag-select -->
+                    <li class="nav-author">
+                        <div class="dropdown-custom">
+                            <a href="javascript:;" class="nav-item-toggle"><img src="img/author-nav.jpg" alt="" class="rounded-circle"></a>
+                            <div class="dropdown-wrapper">
+                                <div class="nav-author__info">
+                                    <div class="author-img">
+                                        <img src="img/author-nav.jpg" alt="" class="rounded-circle">
+                                    </div>
+                                    <div>
+                                        <h6>John Doe</h6>
+                                        <span>Owner</span>
+                                    </div>
+                                </div>
+                                <div class="nav-author__options">
+                                   
+                                    <a href="#" class="nav-author__signout">
+                                        <span data-feather="log-out"></span> Sign Out</a>
+                                </div>
+                            </div>
+                            <!-- ends: .dropdown-wrapper -->
+                        </div>
+                    </li>
+                    <!-- ends: .nav-author -->
+                </ul>
+                <!-- ends: .navbar-right__menu -->
+                <div class="navbar-right__mobileAction d-md-none">
+                    <a href="#" class="btn-search">
+                        <span data-feather="search"></span>
+                        <span data-feather="x"></span></a>
+                    <a href="#" class="btn-author-action">
+                        <span data-feather="more-vertical"></span></a>
+                </div>
+            </div>
+            <!-- ends: .navbar-right -->
+        </nav>
+    </header>
+    <main class="main-content">
+        <aside class="sidebar-wrapper">
+            <div class="sidebar sidebar-collapse" id="sidebar">
+                <div class="sidebar__menu-group">
+                    <ul class="sidebar_nav">
+                        
+                        <!-- MAIN MENU TITLE -->
+                        <li class="menu-title">
+                            <span>Client Portal</span>
+                        </li>
+        
+                        <!-- 1. Appointment Overview -->
+                        <li class="has-child ">
+                            <a  href="appointment-overview.html">
+                                <span data-feather="calendar" class="nav-icon"></span>
+                                <span onclick="window.location='appointment-overview.html'" class="menu-text">Appointment Overview</span>
+                            </a>
+                        </li>
+        
+                        <!-- 2. Object Selection & Invoice Management -->
+                        <li class="has-child">
+                            <a href="#">
+                                <span data-feather="file-text" class="nav-icon"></span>
+                                <span class="menu-text">Objects & Invoices</span>
+                                <span class="toggle-icon"></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="object-selection.html">Object Selection</a>
+                                </li>
+                                <li>
+                                    <a href="invoice-management.html">Invoice Management</a>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <!-- 3. Annual Budget Overview -->
+                        <li class="has-child">
+                            <a href="annual-budget.html">
+                                <span data-feather="bar-chart-2" class="nav-icon"></span>
+                                <span onclick="window.location='annual-budget.html'" class="menu-text">Annual Budget Overview</span>
+                            </a>
+                        </li>
+        
+                        <!-- 4. Reporting & Digital Signature -->
+                        <li class="has-child">
+                            <a href="#">
+                                <span data-feather="edit" class="nav-icon"></span>
+                                <span class="menu-text">Reports & Digital Signature</span>
+                                <span class="toggle-icon"></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="report-legal-complaint.html">Legal Complaints Reporting</a>
+                                </li>
+                                <li>
+                                    <a href="digital-signature.html">Digital Signature</a>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <!-- 5. Prevention Training Tracking -->
+                        <li class="has-child">
+                            <a href="training-tracking.html">
+                                <span data-feather="book-open" class="nav-icon"></span>
+                                <span onclick="window.location='training-tracking.html'" class="menu-text">Prevention Training Tracking</span>
+                            </a>
+                        </li>
+        
+                        <!-- 6. Incident Reports & Complaint Filing -->
+                        <li class="has-child">
+                            <a href="incident-reports.html">
+                                <span data-feather="alert-triangle" class="nav-icon"></span>
+                                <span onclick="window.location='incident-reports.html'" class="menu-text">Incident & Complaints</span>
+                            </a>
+                        </li>
+        
+                        <!-- 7. Organizational Chart -->
+                        <li class="has-child">
+                            <a class="active" href="organizational-chart.html">
+                                <span data-feather="users" class="nav-icon"></span>
+                                <span onclick="window.location='organizational-chart.html'" class="menu-text">Organizational Chart</span>
+                            </a>
+                        </li>
+        
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        
+        
+        <div class="contents">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                       <div class="page-wrapper">
+    <h2>Organizational Chart of Key On-Site Contacts</h2>
+
+    <div class="org-container">
+      <!-- Top Level Contact -->
+      <div class="org-node">
+        <strong>John Smith</strong>
+        <span>Site Manager</span>
+      </div>
+
+      <!-- Second Level Contacts -->
+      <div class="org-children">
+        <div class="org-container">
+          <div class="org-node">
+            <strong>Sarah Johnson</strong>
+            <span>Health & Safety Officer</span>
+          </div>
+        </div>
+
+        <div class="org-container">
+          <div class="org-node">
+            <strong>David Lee</strong>
+            <span>Maintenance Supervisor</span>
+          </div>
+        </div>
+
+        <div class="org-container">
+          <div class="org-node">
+            <strong>Olivia Martin</strong>
+            <span>Security Coordinator</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Level Contacts -->
+      <div class="org-children">
+        <div class="org-container">
+          <div class="org-node">
+            <strong>Emma Wilson</strong>
+            <span>First Aid Contact</span>
+          </div>
+        </div>
+
+        <div class="org-container">
+          <div class="org-node">
+            <strong>Michael Brown</strong>
+            <span>IT Support</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- contact-breadcrumb -->
+                    </div>
+                </div>
+        
+             
+            </div>
+        </div>
+        
+       
+       
+    </main>
+    <div id="overlayer">
+        <span class="loader-overlay">
+            <div class="atbd-spin-dots spin-lg">
+                <span class="spin-dot badge-dot dot-primary"></span>
+                <span class="spin-dot badge-dot dot-primary"></span>
+                <span class="spin-dot badge-dot dot-primary"></span>
+                <span class="spin-dot badge-dot dot-primary"></span>
+            </div>
+        </span>
+    </div>
+    <div class="overlay-dark-sidebar"></div>
+    <div class="customizer-overlay"></div>
+
+    <a href="#" class="customizer-trigger">
+        <span data-feather="settings"></span></a>
+    <div class="customizer-wrapper">
+        <div class="customizer">
+            <div class="customizer__head">
+                <h4 class="customizer__title">Setting</h4>
+                <span class="customizer__sub-title">Customize your dashboard theme</span>
+                <a href="#" class="customizer-close">
+                    <span data-feather="x"></span></a>
+            </div>
+            <div class="customizer__body">
+          
+                <!-- ends: .customizer__single -->
+
+                <div class="customizer__single">
+                    <h4>Theme</h4>
+                    <ul class="customizer-list d-flex l_sidebar">
+                        <li class="customizer-list__item">
+                            <a href="#" data-layout="light" class="active">
+                                <img src="img/light.png" alt="">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                        </li>
+                        <li class="customizer-list__item">
+                            <a href="#" data-layout="dark">
+                                <img src="img/dark.png" alt="">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ends: .customizer__single -->
+
+             
+                <!-- ends: .customizer__single -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDduF2tLXicDEPDMAtC6-NLOekX0A5vlnY"></script>
+    <!-- inject:js-->
+    <script src="js/plugins.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <!-- endinject-->
+     
+</body>
+
+
+
+</html>
