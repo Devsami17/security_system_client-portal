@@ -18,7 +18,81 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- endinject -->
+<style>
+      .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            color: #555;
+            width: 40%;
+        }
+
+        .detail-value {
+            color: #333;
+            width: 55%;
+            text-align: right;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background-color: #ffb80033;
+            color: #ff8c00;
+            font-weight: bold;
+        }
+
+        .btn-back {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            text-align: center;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 600px) {
+            .detail-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .detail-value {
+                text-align: left;
+                width: 100%;
+                margin-top: 5px;
+            }
+        }
+</style>
     <link rel="icon" type="image/png" sizes="16x16" href="https://voags.com/assets/imgs/home1/logo.webp">
 </head>
 
@@ -292,148 +366,60 @@
                         <div class="col-lg-12">
 
                             <div class="breadcrumb-main">
-                                <h4 class="text-capitalize breadcrumb-title">Appointment Overview</h4>
+                                <!-- <h4 class="text-capitalize breadcrumb-title">Appointment Overview</h4> -->
                                
                             </div>
                            
-                            <div class="table-responsive">
-                                <table class="table mb-0 table-borderless table-rounded">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="custom-checkbox check-all">
-                                                        <input class="checkbox" type="checkbox" id="check-all-appointments">
-                                                        <label for="check-all-appointments">
-                                                            <span class="checkbox-text userDatatable-title">Site</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <th class="c-email">
-                                                <span>Date</span>
-                                            </th>
-                                            <th class="c-company">
-                                                <span>Time</span>
-                                            </th>
-                                            <th class="c-position">
-                                                <span>Assigned Officer</span>
-                                            </th>
-                                            <th class="c-phone">
-                                                <span>Purpose</span>
-                                            </th>
-                                            <th class="c-status">
-                                                <span>Status</span>
-                                            </th>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="contact-list-wrap mb-25">
+                                        <div class="contact-list bg-white radius-xl w-100">
+                                            <div class="row g-3 mt-3">
+                                                <div class="container">
+                                                    <h2>Appointment Details</h2>
                                             
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                            
-                                        <!-- Appointment 1 -->
-                                        <tr>
-                                            <td>
-                                                <div class="contact-item d-flex align-items-center">
-                                                    <div class="contact-personal-wrap">
-                                                        <div class="checkbox-group-wrapper">
-                                                            <div class="checkbox-group d-flex">
-                                                                <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                                    <input class="checkbox" type="checkbox" id="check-site-1">
-                                                                    <label for="check-site-1"></label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="detail-row">
+                                                        <div class="detail-label">Site Name</div>
+                                                        <div class="detail-value">ABC Corp - Main Gate</div>
                                                     </div>
-                                                    <div class="contact-personal-info d-flex">
-                                                        <div class="contact_title">
-                                                            <h6><a href="appointment-details.html">ABC Corp - Main Gate</a></h6>
-                                                            <span class="location">Site ID: #S101</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="date">10 March 2025</span></td>
-                                            <td><span class="time">09:00 AM</span></td>
-                                            <td><span class="officer">Ali Khan</span></td>
-                                            <td><span class="purpose">Routine Security Audit</span></td>
-                                            <td>
-                                                <div class="userDatatable-content d-inline-block">
-                                                    <span class="bg-opacity-warning color-warning rounded-pill userDatatable-content-status active">Scheduled</span>
-                                                </div>
-                                            </td>
-                                           
-                                        </tr>
-                            
-                                        <!-- Appointment 2 -->
-                                        <tr>
-                                            <td>
-                                                <div class="contact-item d-flex align-items-center">
-                                                    <div class="contact-personal-wrap">
-                                                        <div class="checkbox-group-wrapper">
-                                                            <div class="checkbox-group d-flex">
-                                                                <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                                    <input class="checkbox" type="checkbox" id="check-site-2">
-                                                                    <label for="check-site-2"></label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="contact-personal-info d-flex">
-                                                        <div class="contact_title">
-                                                            <h6><a href="appointment-details.html">XYZ Industries - Warehouse 3</a></h6>
-                                                            <span class="location">Site ID: #S205</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="date">5 March 2025</span></td>
-                                            <td><span class="time">01:00 PM</span></td>
-                                            <td><span class="officer">Sara Ahmed</span></td>
-                                            <td><span class="purpose">Guard Patrol Assignment</span></td>
-                                            <td>
-                                                <div class="userDatatable-content d-inline-block">
-                                                    <span class="bg-opacity-success color-success rounded-pill userDatatable-content-status active">Completed</span>
-                                                </div>
-                                            </td>
-                                           
-                                        </tr>
-                            
-                                        <!-- Appointment 3 -->
-                                        <tr>
-                                            <td>
-                                                <div class="contact-item d-flex align-items-center">
-                                                    <div class="contact-personal-wrap">
-                                                        <div class="checkbox-group-wrapper">
-                                                            <div class="checkbox-group d-flex">
-                                                                <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                                    <input class="checkbox" type="checkbox" id="check-site-3">
-                                                                    <label for="check-site-3"></label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="contact-personal-info d-flex">
-                                                        <div class="contact_title">
-                                                            <h6><a href="appointment-details.html">Delta Security - Tower A</a></h6>
-                                                            <span class="location">Site ID: #S301</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="date">8 March 2025</span></td>
-                                            <td><span class="time">11:00 AM</span></td>
-                                            <td><span class="officer">Imran Malik</span></td>
-                                            <td><span class="purpose">Emergency Response Drill</span></td>
-                                            <td>
-                                                <div class="userDatatable-content d-inline-block">
-                                                    <span class="bg-opacity-danger color-danger rounded-pill userDatatable-content-status active">Cancelled</span>
-                                                </div>
-                                            </td>
                                             
-                                        </tr>
-                            
-                                    </tbody>
-                                </table>
+                                                    <div class="detail-row">
+                                                        <div class="detail-label">Site ID</div>
+                                                        <div class="detail-value">#S101</div>
+                                                    </div>
+                                            
+                                                    <div class="detail-row">
+                                                        <div class="detail-label">Date</div>
+                                                        <div class="detail-value">10 March 2025</div>
+                                                    </div>
+                                            
+                                                    <div class="detail-row">
+                                                        <div class="detail-label">Time</div>
+                                                        <div class="detail-value">09:00 AM</div>
+                                                    </div>
+                                            
+                                                    <div class="detail-row">
+                                                        <div class="detail-label">Officer</div>
+                                                        <div class="detail-value">Ali Khan</div>
+                                                    </div>
+                                            
+                                                    <div class="detail-row">
+                                                        <div class="detail-label">Purpose</div>
+                                                        <div class="detail-value">Routine Security Audit</div>
+                                                    </div>
+                                            
+                                                    <div class="detail-row">
+                                                        <div class="detail-label">Status</div>
+                                                        <div class="detail-value"><span class="status">Scheduled</span></div>
+                                                    </div>
+                                            
+                                                    <a href="appointment-overview.html" class="btn btn-danger w-100">Back to Appointments</a>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             
                         </div>
