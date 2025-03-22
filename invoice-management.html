@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="https://voags.com/assets/imgs/home1/logo.webp">
 </head>
 
-<body class="layout-light side-menu overlayScroll">
+<body class="layout-light top-menu overlayScroll">
     <div class="mobile-search">
         <form class="search-form">
             <span data-feather="search"></span>
@@ -41,23 +41,75 @@
                     <span data-feather="search"></span>
                     <input class="form-control mr-sm-2 box-shadow-none" type="text" placeholder="Search...">
                 </form>
-              
+                <div class="top-menu">
+                    <div class="strikingDash-top-menu position-relative">
+                      <ul>
+                  
+                        <!-- 1. Overview -->
+                        <li>
+                          <a href="appointment-overview.html">Appointment Overview</a>
+                        </li>
+                  
+                        <!-- 2. Objects & Invoices -->
+                        <li class="has-subMenu">
+                          <a href="#">Objects & Invoices</a>
+                          <ul class="subMenu">
+                            <li>
+                              <a href="object-selection.html">Object Selection</a>
+                            </li>
+                            <li>
+                              <a href="invoice-management.html">Invoice Management</a>
+                            </li>
+                          </ul>
+                        </li>
+                  
+                        <!-- 3. Reports -->
+                        <li class="has-subMenu">
+                          <a href="#">Reports & Digital</a>
+                          <ul class="subMenu">
+                            <li>
+                              <a href="annual-budget.html">Annual Budget</a>
+                            </li>
+                            <li>
+                              <a href="report-legal-complaint.html">Legal Complaints</a>
+                            </li>
+                            <li>
+                              <a href="digital-signature.html">Digital Signature</a>
+                            </li>
+                            <li>
+                              <a href="incident-reports.html">Incidents</a>
+                            </li>
+                          </ul>
+                        </li>
+                  
+                        <!-- 4. Training -->
+                        <li>
+                          <a href="training-tracking.html">Training Tracking</a>
+                        </li>
+                  
+                        <!-- 5. Organization -->
+                        <li>
+                          <a href="organizational-chart.html">Org Chart</a>
+                        </li>
+                  
+                      </ul>
+                    </div>
+                  </div>
+                  
+                
             </div>
             <!-- ends: navbar-left -->
 
             <div class="navbar-right">
                 <ul class="navbar-right__menu">
-                    <li class="nav-search d-none">
-                        <a href="#" class="search-toggle">
-                            <i class="la la-search"></i>
-                            <i class="la la-times"></i>
+              
+                    <li>
+                        <a href="javascript:;" data-layout="dark" class="nav-item-toggle">
+                          <span data-feather="sun"></span>
                         </a>
-                        <form action="https://demo.jsnorm.com/" class="search-form-topMenu">
-                            <span class="search-icon" data-feather="search"></span>
-                            <input class="form-control mr-sm-2 box-shadow-none" type="text" placeholder="Search...">
-                        </form>
-                    </li>
-                    
+                      </li>
+                      
+               
                     <!-- ends: nav-message -->
                     <li class="nav-notification">
                         <div class="dropdown-custom">
@@ -144,17 +196,7 @@
                     
                    
                     <!-- ends: .nav-support -->
-                    <li class="nav-flag-select">
-                        <div class="dropdown-custom">
-                            <a href="javascript:;" class="nav-item-toggle"><img src="img/flag.png" alt="" class="rounded-circle"></a>
-                            <div class="dropdown-wrapper dropdown-wrapper--small">
-                                <a href="#"><img src="img/eng.png" alt=""> English</a>
-                                <a href="#"><img src="img/ger.png" alt=""> German</a>
-                                <a href="#"><img src="img/spa.png" alt=""> Spanish</a>
-                                <a href="#"><img src="img/tur.png" alt=""> Turkish</a>
-                            </div>
-                        </div>
-                    </li>
+                  
                     <!-- ends: .nav-flag-select -->
                     <li class="nav-author">
                         <div class="dropdown-custom">
@@ -448,44 +490,6 @@
     <div class="overlay-dark-sidebar"></div>
     <div class="customizer-overlay"></div>
 
-    <a href="#" class="customizer-trigger">
-        <span data-feather="settings"></span></a>
-    <div class="customizer-wrapper">
-        <div class="customizer">
-            <div class="customizer__head">
-                <h4 class="customizer__title">Setting</h4>
-                <span class="customizer__sub-title">Customize your dashboard theme</span>
-                <a href="#" class="customizer-close">
-                    <span data-feather="x"></span></a>
-            </div>
-            <div class="customizer__body">
-          
-                <!-- ends: .customizer__single -->
-
-                <div class="customizer__single">
-                    <h4>Theme</h4>
-                    <ul class="customizer-list d-flex l_sidebar">
-                        <li class="customizer-list__item">
-                            <a href="#" data-layout="light" class="active">
-                                <img src="img/light.png" alt="">
-                                <i class="fa fa-check-circle"></i>
-                            </a>
-                        </li>
-                        <li class="customizer-list__item">
-                            <a href="#" data-layout="dark">
-                                <img src="img/dark.png" alt="">
-                                <i class="fa fa-check-circle"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- ends: .customizer__single -->
-
-             
-                <!-- ends: .customizer__single -->
-            </div>
-        </div>
-    </div>
 
 
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDduF2tLXicDEPDMAtC6-NLOekX0A5vlnY"></script>
